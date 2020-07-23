@@ -51,7 +51,7 @@ The number of attempts to generate a name increases significantly as `min_dist` 
 ```python
 for i in range(4):
     num_attempts = [checked_name(model, min_dist = i)[1] for j in range(20)]
-    print('mind_dist =', min_dist, ', average number of attempts = ', sum(num_attempts)/len(num_attempts))
+    print('min_dist =', min_dist, ', average number of attempts = ', sum(num_attempts)/len(num_attempts))
 ```
 ```
 min_dist = 1 , average number of attempts =  1.0
