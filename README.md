@@ -26,8 +26,10 @@ The network itself is stored in [dino_model.h5](/dino_model.h5). It can easily b
 from tensorflow import keras
 model = keras.models.load_model('dino_model.h5')
 
-x = np.zeros((1, max_char, char_dim))
-model.predict(x)[0,i]
+# number of available characters = 26 lowercase letters + '\n' = 27
+x = np.zeros(27)
+# array of probabilities associated with the first letter of the name, given a blank input:
+model.predict(x)
 ```
 
 ## Naming function
@@ -61,10 +63,10 @@ min_dist = 2 , average number of attempts =  1.3
 min_dist = 3 , average number of attempts =  1.85
 min_dist = 4 , average number of attempts =  2.05
 ```
-Names can also be generated that begin with a character given by passing the optional argument `start_char`:
+Names can also be restricted to begin with a certain character with the optional argument `start_char`:
 ```python
 for i in range(5):
-    print(checked_name(model, start_char='g')[0],end='')
+    print(checked_name(model, start_char='g')[0],end='') # or 'G', both are accepted
 ```
 ```
 Gyoodon
