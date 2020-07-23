@@ -67,13 +67,6 @@ def checked_name(model, start_char=None, temp=1.0, min_dist=2):
                 tries += 1
     return name.capitalize(), tries
 
-
-print('example name: '+checked_name(model)[0],end='')
-
-num_attempts = [checked_name(model)[1] for i in range(20)]
-print('average number of attempts = ', sum(num_attempts)/len(num_attempts))
-
-
 # Authenticate to Twitter (this can be done by someone with a developer account)
 auth = tweepy.OAuthHandler("CONSUMER_KEY", "CONSUMER_SECRET")
 auth.set_access_token("ACCESS_TOKEN", "ACCESS_TOKEN_SECRET")
