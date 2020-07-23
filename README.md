@@ -73,7 +73,7 @@ Gyoodon
 Gyongosaurus
 Gaviraptor
 Gdilosaurus
-Gyonosaurus
+Gyperodon
 ```
 
 This neural network project pulls together web scraping, machine learning, file writing, and API interfacing in Python, making it an excellent programming exercise and an elegant showcase of many of the practical abilities I've developed. In the future I hope to add temperature controls to this neural network to vary the predictability of the model's output, and eventually add more features to the Twitter posts, such as an image or theorized country of origin.
